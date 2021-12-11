@@ -180,17 +180,7 @@ function flushIptables() {
 	iptables -t mangle -X internet
 }
 
-## Soooo this needs some work. Until recently I've only attempted this at my home network 
-## and I forgot that the way I'm deauthing is actually going directly to the router, not clients
-## So while I was at this bar in Denver I tried this and heard the jukebox announce to the whole bar: 
-## "You've been disconnected from the internet. Oops. It reconnected swiftly
-## and no one knew it was me but there's always the possibility of someone noticing my antenna and piecing it together. 
-## In pretty much every IRL situation it isn't a good idea to do it this way. So don't.
-## However maybe you could add some code which uses airodump or something to gather multiple client MAC addresses and then 
-## deauth each of them in individual threads. Idk. Realistically why would you want to just spam the network and 
-## decrypt a bunch of random people's comms anyway? I guess if you were trying to gain access to the WiFi network or you were in a corporate
-## setting where you just need one person to fuck up, but if you were in a corporate setting you absolutely wouldn't even be doing it this way
-## This is more of a people hacking thing then a company hacking thing. 
+# Fix this. It's loud and sloppy
 function deauthClients() {
 	which aireplay-ng &>/dev/null
 
